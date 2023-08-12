@@ -84,7 +84,11 @@
     height: 275px;
     margin-left: initial;
   }
-}.u-section-2 .u-sheet-1 {
+} .u-section-2 {
+  background-image: linear-gradient(black, #999999);
+}
+
+.u-section-2 .u-sheet-1 {
   min-height: 400px;
 }
 
