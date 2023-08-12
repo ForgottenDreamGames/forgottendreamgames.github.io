@@ -84,4 +84,15 @@
     height: 275px;
     margin-left: initial;
   }
+}.u-section-2 .u-sheet-1 {
+  min-height: 400px;
+}
+
+.u-section-2 .u-custom-html-1 {
+  margin-bottom: 0;
+}
+
+.u-section-2 .u-custom-html-2 {
+  margin-top: 30px;
+  margin-bottom: 60px;
 }
