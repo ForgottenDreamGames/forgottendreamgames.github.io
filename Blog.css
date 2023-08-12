@@ -166,6 +166,11 @@
     grid-template-columns: 100%;
   }
 
+  .u-section-1 .u-container-layout-1 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   .u-section-1 .u-image-1 {
     height: 268px;
     margin-top: -1px;
@@ -187,6 +192,13 @@
   .u-section-1 .u-container-layout-2 {
     width: auto;
     margin-left: 308px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .u-section-1 .u-container-layout-3 {
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .u-section-1 .u-image-2 {
@@ -211,6 +223,8 @@
     margin-top: -267px;
     margin-right: 0;
     margin-left: 309px;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
   .u-section-1 .u-text-3 {
