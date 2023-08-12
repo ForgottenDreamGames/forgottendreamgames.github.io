@@ -97,6 +97,8 @@
 }
 
 .u-section-2 .u-custom-html-2 {
-  margin-top: 30px;
+  margin-top: 29px;
   margin-bottom: 60px;
+  height: auto;
+  min-height: 25px;
 }
