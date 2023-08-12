@@ -84,7 +84,11 @@
     width: 340px;
     height: 128px;
   }
-}.u-section-2 .u-gallery-1 {
+} .u-section-2 {
+  min-height: 720px;
+}
+
+.u-section-2 .u-gallery-1 {
   height: 720px;
   margin-top: 0;
   margin-bottom: 0;
@@ -190,11 +194,5 @@
 @media (max-width: 767px) {
   .u-section-2 .u-gallery-1 {
     margin-top: 130px;
-  }
-}
-
-@media (max-width: 575px) {
-   .u-section-2 {
-    min-height: 720px;
   }
 }
