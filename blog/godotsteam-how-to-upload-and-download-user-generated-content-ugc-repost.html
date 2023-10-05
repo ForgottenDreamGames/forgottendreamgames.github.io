@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="en"><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Games, Steam, Sokoban, IndieGame">
+    <meta name="description" content="">
+    <title>GodotSteam: how to upload and download user-generated content (UGC) (repost)</title>
+    <link rel="stylesheet" href="../nicepage.css" media="screen">
+<link rel="stylesheet" href="../Post-Template.css" media="screen">
+    <script class="u-script" type="text/javascript" src="../jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="../nicepage.js" defer=""></script>
+    <meta name="generator" content="Nicepage 5.16.3, nicepage.com">
+    <script id="dsq-count-scr" src="//forgotten-dream.disqus.com/count.js" async="async"></script>
+    <link rel="icon" href="../images/favicon.png">
+    <link id="u-theme-google-font" rel="stylesheet" href="../fonts.css">
+    
+    
+    
+    
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "ForgottenDream"
+}</script>
+    <meta name="theme-color" content="#478ac9">
+  <meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
+  <body class="u-body u-white u-xl-mode" data-lang="en"><header class="u-black u-clearfix u-header u-header" id="sec-9591" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""><div class="u-clearfix u-sheet u-sheet-1">
+        <nav class="u-menu u-menu-one-level u-offcanvas u-menu-1">
+          <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px; font-weight: 700; text-transform: uppercase;">
+            <a class="u-button-style u-custom-active-border-color u-custom-active-color u-custom-border u-custom-border-color u-custom-borders u-custom-hover-border-color u-custom-hover-color u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-color u-custom-text-decoration u-custom-text-hover-color u-custom-text-shadow u-custom-text-shadow-blur u-custom-text-shadow-color u-custom-text-shadow-transparency u-custom-text-shadow-x u-custom-text-shadow-y u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base u-text-palette-1-light-3" href="#">
+              <svg class="u-svg-link" viewBox="0 0 24 24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>
+              <svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
+</g></svg>
+            </a>
+          </div>
+          <div class="u-custom-menu u-nav-container">
+            <ul class="u-nav u-spacing-30 u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-4-light-2 u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-light-3 u-button-style u-nav-link u-text-active-palette-3-light-1 u-text-hover-palette-4-dark-1 u-text-palette-4-light-2" href="../Home.html" style="padding: 10px 0px;">Home</a>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-4-light-2 u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-light-3 u-button-style u-nav-link u-text-active-palette-3-light-1 u-text-hover-palette-4-dark-1 u-text-palette-4-light-2" href="../blog/blog.html" style="padding: 10px 0px;">Blog</a>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-4-light-2 u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-light-3 u-button-style u-nav-link u-text-active-palette-3-light-1 u-text-hover-palette-4-dark-1 u-text-palette-4-light-2" href="../About.html" style="padding: 10px 0px;">About</a>
+</li></ul>
+          </div>
+          <div class="u-custom-menu u-nav-container-collapse">
+            <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+              <div class="u-inner-container-layout u-sidenav-overflow">
+                <div class="u-menu-close"></div>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../Home.html">Home</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../blog/blog.html">Blog</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../About.html">About</a>
+</li></ul>
+              </div>
+            </div>
+            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+          </div>
+        </nav>
+      </div></header>
+    <section class="u-align-center u-black u-clearfix u-section-1" id="sec-24ba">
+      <div class="u-clearfix u-sheet u-valign-middle-md u-valign-middle-sm u-valign-middle-xs u-sheet-1"><!--post_details--><!--post_details_options_json--><!--{"source":""}--><!--/post_details_options_json--><!--blog_post-->
+        <div class="u-container-style u-expanded-width u-post-details u-post-details-1">
+          <div class="u-container-layout u-valign-middle u-container-layout-1"><!--blog_post_image-->
+            <img alt="" class="u-blog-control u-expanded-width u-image u-image-default lazyload u-image-1" data-src="../images/image.png" src="../images/image.png"><!--/blog_post_image--><!--blog_post_header-->
+            <h2 class="u-blog-control u-text u-text-1">GodotSteam: how to upload and download user-generated content (UGC) (repost)</h2><!--/blog_post_header--><!--blog_post_metadata-->
+            <div class="u-blog-control u-metadata u-metadata-1"><!--blog_post_metadata_date-->
+              <span class="u-meta-date u-meta-icon">Oct 05, 2023</span><!--/blog_post_metadata_date--><!--blog_post_metadata_category-->
+              <!--/blog_post_metadata_category-->
+            </div><!--/blog_post_metadata--><!--blog_post_content-->
+            <div class="u-align-justify u-blog-control u-post-content u-text u-text-2 fr-view"><p><span style="font-style: italic;">This is a re-post from my old blog on another platform.&nbsp;</span></p><p id="isPasted">If you want your players to be able to upload and download any content to and from Steam Workshop with GodotSteam, here is how I do it. I hope this example helps other developers who might be confused by the Steamworks documentation as I was. Below is the code that I have in Ailin: Traps and Treasures (ATnT) with clutter and some game-specific fragments removed and some comments added.In my example, the terms level and UGC item are basically interchangeable.I use pre-compiled GodotSteam 3.17 with SteamSDK 1.55.</p><h2 id="isPasted">Let's start with initialization</h2><p>First, a good idea might be to create a dedicated script file which would handle all Steam-related interactions and would be a singleton. I called this file <a href="https://pastebin.com/0DH0V1xM" target="_blank" rel="noopener noreferrer"></a><span style="font-style: italic;"><a class="u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-block-0427-7" href="https://pastebin.com/0DH0V1xM" rel="noopener noreferrer" target="_blank" style="background-image: none; padding-top: 0; padding-bottom: 0; padding-left: 0; padding-right: 0">SteamIntegration.gd</a></span> in ATnT. In the ready function, I connect a number of signals (see below) and initialize Steam following this <a class="u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-block-0427-5" href="https://godotsteam.com/tutorials/initializing/" rel="noopener noreferrer" target="_blank" style="background-image: none; padding-top: 0; padding-bottom: 0; padding-left: 0; padding-right: 0">tutorial</a>.</p><blockquote><p id="isPasted">func _ready():</p><p>&nbsp; &nbsp; Steam.connect("steamworks_error", self, "_log_error", [], CONNECT_PERSIST)</p><p>&nbsp; &nbsp; # init steam</p><p>&nbsp; &nbsp; Steam.connect("current_stats_received", self, "_steam_Stats_Ready", [], CONNECT_PERSIST)</p><p>&nbsp; &nbsp; # callbacks to connect</p><p>&nbsp; &nbsp; Steam.connect("item_created", self, "_on_item_created", [], CONNECT_PERSIST)</p><p>&nbsp; &nbsp; Steam.connect("item_updated", self, "_on_item_updated", [], CONNECT_PERSIST)</p><p>&nbsp; &nbsp; Steam.connect("ugc_query_completed", self, "_on_ugc_query_completed", [], CONNECT_PERSIST)</p><p>&nbsp; &nbsp; Steam.connect("item_downloaded", self, "_on_item_downloaded", [], CONNECT_PERSIST)</p><p>&nbsp; &nbsp; Steam.connect("overlay_toggled", self, "_on_overlay_toggle", [], CONNECT_PERSIST)</p><p>&nbsp; &nbsp; Steam.steamInit()</p><p>&nbsp; &nbsp; Steam.requestCurrentStats()</p></blockquote><p id="isPasted">The global variable <span style="font-style: italic;">current_item_id</span> is a workaround, which I use to upload a new UGC item.</p><p>UGC item, which is something that a player creates in-game and wants to upload to Steam Workshop, is technically (from Steam's perspective) a folder containing files that you put in. In the case of ATnT, that is a scene file with information about the user-created level which I save using Godot's ResourceSaver class. I will probably describe in another post, how level editing and saving works, but there are some decent <a class="u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-block-0427-6" href="https://www.youtube.com/watch?v=uZTjBYDjGCs" rel="noopener noreferrer" target="_blank" style="background-image: none; padding-top: 0; padding-bottom: 0; padding-left: 0; padding-right: 0">tutorials on Youtube</a>.&nbsp;</p><p><img src="../images/image1.png" width="620" style="width: 620px;" class="fr-dib fr-fic"></p><p id="isPasted">When the level is created with a build-in editor in ATnT, there is a folder (with a unique name) which contains two files: level.tscn and level.data. The second file contains metadata, which I use to store unique Steam item_id, item (in my case, level) title, tags, and other information. This file is created with Godot's ConfigFile class.</p><p><img src="../images/image2.png" width="422" style="width: 422px;" class="fr-dib fr-fic"></p><h2 id="isPasted">Uploading and Updating UGC</h2><p>The upload happens in two steps: create and update. Creating an item in the Workshop means basically creating a record in some database. The update part is responsible for uploading all the data to Steam servers and (if needed) updating an existing item.</p><p id="isPasted">Creating UGC itemCreating is done with just a couple of lines of code:</p><blockquote><p id="isPasted">func upload_level(lvl_id):</p><p>&nbsp; &nbsp; current_item_id = lvl_id</p><p>&nbsp; &nbsp; Steam.createItem(appId, 0)</p></blockquote><p id="isPasted"><span style="font-weight: 700;">appId</span> is provided by the <span style="font-style: italic;">current_stats_received</span> callback The<span style="font-weight: 700;">&nbsp;lvl_id</span> is a unique identifier which is generated inside a game. It can be a number or string. You can use uuid or prompt your players to name their level. I use a combination of a random number and UNIX timestamp. When the item is created, callback <span style="font-style: italic;">item_created</span> is called. Now you can actually set up all the needed parameters and upload the data for the item.</p><blockquote><p id="isPasted">func _on_item_created(result: int, file_id: int, accept_tos: bool):</p><p>&nbsp; &nbsp; var handler_id = Steam.startItemUpdate(appId, file_id)</p><p>&nbsp; &nbsp; var lvl_id = current_item_id</p><p>&nbsp; &nbsp; var lvl_path = "ABSOLUTE\PATH\TO\ITEM\FOLDER"</p><p>&nbsp; &nbsp; # Access metadata file and read the level title and tags from it</p><p>&nbsp; &nbsp; var metadata:ConfigFile=ConfigFile.new()</p><p>&nbsp; &nbsp; metadata.load("PATH\TO\METADATA\FILE")</p><p>&nbsp; &nbsp; var lvl_title = metadata.get_value("main", "title", "")</p><p>&nbsp; &nbsp; var lvl_tags = []</p><p>&nbsp; &nbsp; # Saving file_id into the metadata file so I can update this item later if needed</p><p>&nbsp; &nbsp; metadata.set_value("steam", "file_id", file_id)</p><p>&nbsp; &nbsp; metadata.save("PATH\TO\METADATA\FILE")</p><p>&nbsp; &nbsp; for tag in ["LIST", "OF", "YOUR", "TAGS"]:</p><p>&nbsp; &nbsp; &nbsp; &nbsp; if metadata.get_value("main", tag, false):</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; lvl_tags.append(tag)</p><p>&nbsp; &nbsp; # Setting UGC item title - it will appear in the workshop</p><p>&nbsp; &nbsp; Steam.setItemTitle(handler_id, lvl_title)</p><p>&nbsp; &nbsp; # Setting the path to directory containing the item files</p><p>&nbsp; &nbsp; Steam.setItemContent(handler_id, lvl_path)</p><p>&nbsp; &nbsp; # Setting UGC item tags - they will be visible in the workshop</p><p>&nbsp; &nbsp; Steam.setItemTags(handler_id, lvl_tags)</p><p>&nbsp; &nbsp; # Attaching a preview file is an optional step. The preview file is just a .png image. For example, you can take a screenshot in Godot and save it as file.</p><p>&nbsp; &nbsp; Steam.setItemPreview(handler_id, "ABSOLUTE\PATH\TO\PREVIEW\FILE.PNG")</p><p>&nbsp; &nbsp; # Making item visible in the workshop</p><p>&nbsp; &nbsp; Steam.setItemVisibility(handler_id, 0)</p><p>&nbsp; &nbsp; # Adding workshop metadata that is not visible via web interface. For example, I store the version of the editor.</p><p>&nbsp; &nbsp; Steam.setItemMetadata(handler_id, "OPTIONAL METADATA STRING")</p><p>&nbsp; &nbsp; # Submit item update - Steam will now upload the data</p><p>&nbsp; &nbsp; Steam.submitItemUpdate(handler_id, "CHANGE NOTE")</p><p>&nbsp; &nbsp; current_item_id = null</p><p>&nbsp; &nbsp; current_file_id = file_id</p><p>&nbsp; &nbsp; # You will need this file_id if you wish to monitor the progress</p></blockquote><p id="isPasted">If I need to update an existing UGC item, I just call the <span style="font-style: italic;">_on_item_created</span> function with the saved (in metadata file) file_id. When the item is updated, the <span style="font-style: italic;">item_updated</span> callback is called.</p><blockquote><p id="isPasted">func _on_item_updated(result: int, accept_tos):</p><p>&nbsp; &nbsp; var item_page_template = "steam://url/CommunityFilePage/%s"</p><p>&nbsp; &nbsp; if accept_tos:</p><p>&nbsp; &nbsp; &nbsp; &nbsp; # Ast the player to accept workshop ToS if needed</p><p>&nbsp; &nbsp; &nbsp; &nbsp; Steam.activateGameOverlayToWebPage(item_page_template % str(current_file_id))</p></blockquote><h2 id="isPasted">Downloading UGC</h2><p>First, we need to request a list of UGC items in the workshop.</p><blockquote><p id="isPasted">func get_workshop_levels(page :int= 1, filters :Array= []):</p><p>&nbsp; &nbsp; if current_ugc_query_handler_id &gt; 0:</p><p>&nbsp; &nbsp; &nbsp; &nbsp; # There is already a query in the works, so will just release its handler because we need the new one to work its way.</p><p>&nbsp; &nbsp; &nbsp; &nbsp; Steam.releaseQueryUGCRequest(current_ugc_query_handler_id)</p><p>&nbsp; &nbsp; # This is a quick way to convert YOUR pages into STEAM pages. Steam SDK does not allow you to specify the number of items per page, it always returns up to 50 results. Here, LVLS_PER_PAGE = 10 and STEAM_LVLS_PER_PAGE = 50.</p><p>&nbsp; &nbsp; var steam_page = ceil(page * LVLS_PER_PAGE / STEAM_LVLS_PER_PAGE)</p><p>&nbsp; &nbsp; # Creating a query with type 0 - ordered by upvotes for all time.</p><p>&nbsp; &nbsp; current_ugc_query_handler_id = Steam.createQueryAllUGCRequest(0, 0, appId, appId, steam_page)</p><p>&nbsp; &nbsp; # Add filters. In my case, I am exluding tags. filters is just an array of strings.</p><p>&nbsp; &nbsp; for filter in filters:</p><p>&nbsp; &nbsp; &nbsp; &nbsp; Steam.addExcludedTag(current_ugc_query_handler_id, filter)</p><p>&nbsp; &nbsp; # Reduce the number of server calls by relying on local cache (managed by SteamSDK)</p><p>&nbsp; &nbsp; Steam.setAllowCachedResponse(current_ugc_query_handler_id, 30)</p><p>&nbsp; &nbsp; # Finally, send the query</p><p>&nbsp; &nbsp; Steam.sendQueryUGCRequest(current_ugc_query_handler_id)</p></blockquote><p id="isPasted">Then, when the results are received, we can process them and show the list of items to the player.</p><blockquote><p id="isPasted">func _on_ugc_query_completed(handle:int, result:int, results_returned:int, total_matching:int, cached:bool):</p><p>&nbsp; &nbsp; # If the current handler id changed - it means that we requested a list of items again, so we can dismiss these results.&nbsp;</p><p>&nbsp; &nbsp; if handle != current_ugc_query_handler_id:</p><p>&nbsp; &nbsp; &nbsp; &nbsp; Steam.releaseQueryUGCRequest(handle)</p><p>&nbsp; &nbsp; &nbsp; &nbsp; return</p><p>&nbsp; &nbsp; if result != 1:</p><p>&nbsp; &nbsp; &nbsp; &nbsp; # The query failed. See steam result codes for possible reasons.</p><p>&nbsp; &nbsp; &nbsp; &nbsp; return</p><p>&nbsp; &nbsp; var list_of_results = []</p><p>&nbsp; &nbsp; for item_id in range(results_returned):</p><p>&nbsp; &nbsp; &nbsp; &nbsp; # Get information for each item and (optional) metadata</p><p>&nbsp; &nbsp; &nbsp; &nbsp; var item = Steam.getQueryUGCResult(handle, item_id)</p><p>&nbsp; &nbsp; &nbsp; &nbsp; var md = Steam.getQueryUGCMetadata(handle, item_id)</p><p>&nbsp; &nbsp; &nbsp; &nbsp; item["metadata"] = md</p><p>&nbsp; &nbsp; &nbsp; &nbsp; list_of_results.append(item)</p><p>&nbsp; &nbsp; # Release the query handle to free memory</p><p>&nbsp; &nbsp; Steam.releaseQueryUGCRequest(handle)</p><p>&nbsp; &nbsp; current_ugc_query_handler_id = 0</p><p>&nbsp; &nbsp; # Now we can show the list of results to the player</p></blockquote><p id="isPasted">For the item structure, see <a class="u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-block-0427-8" href="https://godotsteam.com/classes/ugc/" rel="noopener noreferrer" target="_blank" style="background-image: none; padding-top: 0; padding-bottom: 0; padding-left: 0; padding-right: 0">GodotSteam documentation</a>.&nbsp;</p><p id="isPasted"><span style="font-weight: 700;">NB</span>: <span style="font-style: italic;">There are also tools to monitor the download progress, but I do not use them. Therefor, this part is omitted.&nbsp;</span></p><p id="isPasted">In ATnT, I just show a list of results and allow players to download and start playing the level with one click.</p><p><img src="../images/image3.png" width="620" style="width: 620px;" class="fr-dib fr-fic"></p><p id="isPasted">Now, we can download the level and start playing.</p><blockquote><p id="isPasted">func download_level(lvl_id):</p><p>&nbsp; &nbsp; if current_loading_level_id==lvl_id:</p><p>&nbsp; &nbsp; &nbsp; &nbsp; # This means that we are already downloading this item. Probably just a second click on a button.</p><p>&nbsp; &nbsp; &nbsp; &nbsp; return false</p><p>&nbsp; &nbsp; elif current_loading_level_id&gt;0 and current_loading_level_id!=lvl_id:</p><p>&nbsp; &nbsp; &nbsp; &nbsp; # We are already downloading another level. I allow this situations to happen but you might decide otherwise.</p><p>&nbsp; &nbsp; &nbsp; &nbsp; pass</p><p>&nbsp; &nbsp; # This function return bool, true if download request was successfully sent</p><p>&nbsp; &nbsp; if Steam.downloadItem(lvl_id, false):</p><p>&nbsp; &nbsp; &nbsp; &nbsp; current_loading_level_id = lvl_id</p><p>&nbsp; &nbsp; &nbsp; &nbsp; # Here you can block user input to prevent send clicks a launch loading animation.</p></blockquote><p id="isPasted">When the item is downloaded, the <span style="font-style: italic;">item_downloaded</span> callback is called.</p><blockquote><p id="isPasted">func _on_item_downloaded(result, file_id, app_id):</p><p>&nbsp; &nbsp; if result != 1:</p><p>&nbsp; &nbsp; &nbsp; &nbsp; # See steam result codes for more details</p><p>&nbsp; &nbsp; &nbsp; &nbsp; print_debug("Download failed %d" % result)</p><p>&nbsp; &nbsp; if file_id != current_loading_level_id:</p><p>&nbsp; &nbsp; &nbsp; &nbsp; # We are expecting another file to download, so we will just skip this one. You can of course allow multiple parallel downloads in you game, if you wish.</p><p>&nbsp; &nbsp; &nbsp; &nbsp; return</p><p>&nbsp; &nbsp; # Getting the information about the downloaded item</p><p>&nbsp; &nbsp; var lvl_info = Steam.getItemInstallInfo(file_id)</p><p>&nbsp; &nbsp; # lvl_info["folder"] will contain a folder with item files</p><p>&nbsp; &nbsp; # In my case, these are level.tscn and level.data</p><p>&nbsp; &nbsp; # Reset the global variable to allow new downloads to happen</p><p>&nbsp; &nbsp; current_loading_level_id = -1</p><p>&nbsp; &nbsp; # You can stop tracking for all items just in case there is still an item in use</p><p>&nbsp; &nbsp; Steam.stopPlaytimeTrackingForAllItems()</p><p>&nbsp; &nbsp; # Start tracking playtime for the downloaded item</p><p>&nbsp; &nbsp; Steam.startPlaytimeTracking([file_id])</p><p>&nbsp; &nbsp; # Lauch the downloaded level</p><p>&nbsp; &nbsp; SomeFunctionToLauchTheLevel(lvl_info["folder"])</p></blockquote><p id="isPasted"><span style="font-weight: 700;">NB</span>: There is an issue with the workshop which I encountered. In my case, the Steam.getQueryUGCResult function call failed if the workshop was not visible to everyone. I suspect it happened because the game was not released yet. I was not able to locate and fix this.</p><h2 id="isPasted">Voting</h2><p>Voting up and down is very simple.</p><blockquote><p id="isPasted">func upvote_level(file_id:int):</p><p>&nbsp; &nbsp; if !checkSteam():</p><p>&nbsp; &nbsp; &nbsp; &nbsp; return false</p><p>&nbsp; &nbsp; Steam.setUserItemVote(file_id, true)</p><p><br></p><p>func downvote_level(file_id:int):</p><p>&nbsp; &nbsp; if !checkSteam():</p><p>&nbsp; &nbsp; &nbsp; &nbsp; return false</p><p>&nbsp; &nbsp; Steam.setUserItemVote(file_id, false)</p></blockquote><p id="isPasted">Here, I left the checkSteam function calls. Essentially, it checks that the Steam is running and that the player owns the game. I am not sure if these checks can actually protect you from piracy; I just leave them in case. In other examples, I removed these calls to make the code less wordy. Otherwise, these checks are the first thing I do in almost every function.&nbsp;</p><p><a class="u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-block-0427-9" href="https://pastebin.com/0DH0V1xM" rel="noopener noreferrer" target="_blank" style="background-image: none; padding-top: 0; padding-bottom: 0; padding-left: 0; padding-right: 0">Here is the whole SteamIntegration.gd file.</a></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p></div><!--/blog_post_content-->
+          </div>
+        </div><!--/blog_post--><!--/post_details-->
+      </div>
+    </section>
+    <section class="skrollable u-clearfix u-gradient u-section-2" id="sec-8dac">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-clearfix u-custom-html u-expanded-width u-custom-html-1">
+          <script id="dsq-count-scr" src="//forgotten-dream.disqus.com/count.js" async="async"></script>
+          <div id="disqus_thread"></div>
+          <script> /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://forgotten-dream.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })(); </script>
+          <noscript>Please enable JavaScript to view the &amp;amp;amp;amp;amp;amp;lt;a href="https://disqus.com/?ref_noscript"&amp;amp;amp;amp;amp;amp;gt;comments powered by Disqus.&amp;amp;amp;amp;amp;amp;lt;/a&amp;amp;amp;amp;amp;amp;gt;</noscript>
+        </div>
+        <div class="u-clearfix u-custom-html u-expanded-width u-custom-html-2">
+          <div id="disqus_thread"></div>
+          <script> /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://forgotten-dream.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })(); </script>
+          <noscript>Please enable JavaScript to view the &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;lt;a href="https://disqus.com/?ref_noscript"&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;gt;comments powered by Disqus.&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;lt;/a&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;gt;</noscript>
+        </div>
+      </div>
+    </section>
+    
+    
+    
+    <footer class="u-align-center u-clearfix u-footer u-grey-90 u-footer" id="sec-f6b5"><div class="u-clearfix u-sheet u-sheet-1">
+        <lt-highlighter style="display: none; z-index: 1 !important;">
+          <lt-div spellcheck="false" class="lt-highlighter__wrapper" style="width: 417px; height: 22px; transform: none !important; transform-origin: 208.5px 11.1953px 0px !important; zoom: 1 !important; margin-top: 49px; margin-left: 362px;">
+            <lt-div class="lt-highlighter__scroll-element" style="top: 0px; left: 0px; width: 417px; height: 22px;"></lt-div>
+          </lt-div>
+        </lt-highlighter>
+        <p class="u-small-text u-text u-text-variant u-text-white u-text-1">Forgotten Dream&nbsp;<span class="u-file-icon u-icon u-text-white"><img src="../images/3513164-f3192521.png" alt=""></span>&nbsp;2023<br>
+        </p>
+      </div></footer><section class="u-align-center u-clearfix u-cookies-consent u-grey-80 u-cookies-consent" id="sec-597b">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
+          <div class="u-gutter-0 u-layout">
+            <div class="u-layout-row">
+              <div class="u-container-style u-layout-cell u-left-cell u-size-43-md u-size-43-sm u-size-43-xs u-size-46-lg u-size-46-xl u-layout-cell-1">
+                <div class="u-container-layout u-valign-middle u-container-layout-1">
+                  <h3 class="u-text u-text-default u-text-1">Cookies &amp; Privacy</h3>
+                  <p class="u-text u-text-default u-text-2">This website uses cookies to ensure you get the best experience on our website.</p>
+                </div>
+              </div>
+              <div class="u-align-left u-container-style u-layout-cell u-right-cell u-size-14-lg u-size-14-xl u-size-17-md u-size-17-sm u-size-17-xs u-layout-cell-2">
+                <div class="u-container-layout u-valign-middle-lg u-valign-middle-md u-valign-middle-xl u-valign-top-sm u-valign-top-xs u-container-layout-2">
+                  <a href="###" class="u-border-none u-btn u-button-confirm u-button-style u-hover-palette-3-dark-2 u-palette-3-light-1 u-btn-1">Confirm</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <style> .u-cookies-consent {
+  background-image: none;
+}
+
+.u-cookies-consent .u-sheet-1 {
+  min-height: 212px;
+}
+
+.u-cookies-consent .u-layout-wrap-1 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.u-cookies-consent .u-layout-cell-1 {
+  min-height: 152px;
+}
+
+.u-cookies-consent .u-container-layout-1 {
+  padding: 30px 60px;
+}
+
+.u-cookies-consent .u-text-1 {
+  margin-top: 0;
+  margin-right: 20px;
+  margin-bottom: 0;
+}
+
+.u-cookies-consent .u-text-2 {
+  margin: 8px 20px 0 0;
+}
+
+.u-cookies-consent .u-layout-cell-2 {
+  min-height: 152px;
+}
+
+.u-cookies-consent .u-container-layout-2 {
+  padding: 30px;
+}
+
+.u-cookies-consent .u-btn-1 {
+  letter-spacing: 1px;
+  border-style: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-image: none;
+  margin: 0 auto 0 0;
+}
+
+@media (max-width: 1199px) {
+  .u-cookies-consent .u-sheet-1 {
+    min-height: 131px;
+  }
+
+  .u-cookies-consent .u-layout-cell-1 {
+    min-height: 125px;
+  }
+
+  .u-cookies-consent .u-text-1 {
+    margin-right: 0;
+  }
+
+  .u-cookies-consent .u-text-2 {
+    margin-right: 0;
+  }
+
+  .u-cookies-consent .u-layout-cell-2 {
+    min-height: 125px;
+  }
+}
+
+@media (max-width: 991px) {
+  .u-cookies-consent .u-sheet-1 {
+    min-height: 106px;
+  }
+
+  .u-cookies-consent .u-layout-cell-1 {
+    min-height: 100px;
+  }
+
+  .u-cookies-consent .u-container-layout-1 {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .u-cookies-consent .u-layout-cell-2 {
+    min-height: 100px;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-cookies-consent .u-sheet-1 {
+    min-height: 225px;
+  }
+
+  .u-cookies-consent .u-layout-cell-1 {
+    min-height: 154px;
+  }
+
+  .u-cookies-consent .u-container-layout-1 {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+  }
+
+  .u-cookies-consent .u-layout-cell-2 {
+    min-height: 65px;
+  }
+
+  .u-cookies-consent .u-container-layout-2 {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-cookies-consent .u-sheet-1 {
+    min-height: 121px;
+  }
+
+  .u-cookies-consent .u-layout-cell-1 {
+    min-height: 100px;
+  }
+
+  .u-cookies-consent .u-layout-cell-2 {
+    min-height: 15px;
+  }
+}</style></section>
+  
+</body></html>
