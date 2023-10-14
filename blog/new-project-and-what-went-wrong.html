@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="en"><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Games, Steam, Sokoban, IndieGame">
+    <meta name="description" content="">
+    <title>New Project and what went wrong</title>
+    <link rel="stylesheet" href="../nicepage.css" media="screen">
+<link rel="stylesheet" href="../Post-Template.css" media="screen">
+    <script class="u-script" type="text/javascript" src="../jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="../nicepage.js" defer=""></script>
+    <meta name="generator" content="Nicepage 5.16.3, nicepage.com">
+    <script id="dsq-count-scr" src="//forgotten-dream.disqus.com/count.js" async="async"></script>
+    <link rel="icon" href="../images/favicon.png">
+    <link id="u-theme-google-font" rel="stylesheet" href="../fonts.css">
+    
+    
+    
+    
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "ForgottenDream"
+}</script>
+    <meta name="theme-color" content="#478ac9">
+  <meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
+  <body class="u-body u-white u-xl-mode" data-lang="en"><header class="u-black u-clearfix u-header u-header" id="sec-9591" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""><div class="u-clearfix u-sheet u-sheet-1">
+        <nav class="u-menu u-menu-one-level u-offcanvas u-menu-1">
+          <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px; font-weight: 700; text-transform: uppercase;">
+            <a class="u-button-style u-custom-active-border-color u-custom-active-color u-custom-border u-custom-border-color u-custom-borders u-custom-hover-border-color u-custom-hover-color u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-color u-custom-text-decoration u-custom-text-hover-color u-custom-text-shadow u-custom-text-shadow-blur u-custom-text-shadow-color u-custom-text-shadow-transparency u-custom-text-shadow-x u-custom-text-shadow-y u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base u-text-palette-1-light-3" href="#">
+              <svg class="u-svg-link" viewBox="0 0 24 24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>
+              <svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
+</g></svg>
+            </a>
+          </div>
+          <div class="u-custom-menu u-nav-container">
+            <ul class="u-nav u-spacing-30 u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-4-light-2 u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-light-3 u-button-style u-nav-link u-text-active-palette-3-light-1 u-text-hover-palette-4-dark-1 u-text-palette-4-light-2" href="../Home.html" style="padding: 10px 0px;">Home</a>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-4-light-2 u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-light-3 u-button-style u-nav-link u-text-active-palette-3-light-1 u-text-hover-palette-4-dark-1 u-text-palette-4-light-2" href="../blog/blog.html" style="padding: 10px 0px;">Blog</a>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-4-light-2 u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-light-3 u-button-style u-nav-link u-text-active-palette-3-light-1 u-text-hover-palette-4-dark-1 u-text-palette-4-light-2" href="../About.html" style="padding: 10px 0px;">About</a>
+</li></ul>
+          </div>
+          <div class="u-custom-menu u-nav-container-collapse">
+            <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+              <div class="u-inner-container-layout u-sidenav-overflow">
+                <div class="u-menu-close"></div>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../Home.html">Home</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../blog/blog.html">Blog</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../About.html">About</a>
+</li></ul>
+              </div>
+            </div>
+            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+          </div>
+        </nav>
+      </div></header>
+    <section class="u-align-center u-black u-clearfix u-section-1" id="sec-24ba">
+      <div class="u-clearfix u-sheet u-valign-middle-md u-valign-middle-sm u-valign-middle-xs u-sheet-1"><!--post_details--><!--post_details_options_json--><!--{"source":""}--><!--/post_details_options_json--><!--blog_post-->
+        <div class="u-container-style u-expanded-width u-post-details u-post-details-1">
+          <div class="u-container-layout u-valign-middle u-container-layout-1"><!--blog_post_image-->
+            <img alt="" class="u-blog-control u-expanded-width u-image u-image-default lazyload u-image-1" data-src="../images/image4.png" src="../images/image4.png"><!--/blog_post_image--><!--blog_post_header-->
+            <h2 class="u-blog-control u-text u-text-1">New Project and what went wrong</h2><!--/blog_post_header--><!--blog_post_metadata-->
+            <div class="u-blog-control u-metadata u-metadata-1"><!--blog_post_metadata_date-->
+              <span class="u-meta-date u-meta-icon">Oct 14, 2023</span><!--/blog_post_metadata_date--><!--blog_post_metadata_category-->
+              <!--/blog_post_metadata_category-->
+            </div><!--/blog_post_metadata--><!--blog_post_content-->
+            <div class="u-align-justify u-blog-control u-post-content u-text u-text-2 fr-view"><p id="isPasted">Recently, I announced on X that I am putting the current project (codename: Hekate) on hold. Here, I'd like to document why, primarily for myself.<img src="../images/image4.png" width="620" display="block" align="center" style="width: 620px;" class="fr-dib fr-fic"></p><p>Hekate is supposed to be a 2D side-scrolling horror game with some social simulation elements. Meaning NPCs would "live their life" and follow routines, and even communicate with each other. While this task is massive from a programming standpoint, I am confident in my ability to develop such a game. The problem, however, is in a slightly different place.</p><p>Being quite complex from the get-go, Hekate requires significant effort from the organisational perspective. Having a complicated system in mind, I need to have the code, the (placeholder) art, the (placeholder) text, and other elements to make a first iteration and develop a prototype which would be able to illustrate the basic gameplay. Unfortunately, a character walking around the map is not enough. Even the first iteration would require a lot of work (in many departments). I know myself and that I could be easily discouraged without visible progress to the point where I get burnt out, even when the development is steadily going. What makes the development harder is that I used inheritance a lot in developing the basic framework for the game instead of composition or a combination of inheritance and composition. Thus, to effectively continue, I need to reorganise the project and refactor a lot of code. That would be even more discouraging to me.</p><p>Additionally, I started to doubt some decisions I made initially. For example, I want to have some stealth mechanics: hiding from enemies should be an essential part of the gameplay. There are examples of stealth in 2D side-scrollers, and I thought I could make it work too. However, when I started studying similar games, stealth in those was quite dull to me. It did not evoke the emotions I wanted from Hekate. Having that problem at hand, I need to make new decisions that would significantly affect the game, such as changing the topography principles behind the levels (e.g., creating loops). And that is just one example of several. To solve these problems, I must take a step back and return to "prototyping on paper" (I actually use a small whiteboard), and I don't want to do that right now. So, I put it on hold until I have a better position to re-start this project.&nbsp;</p><p>Meanwhile, I decided to start another project, smaller in scale. Surprisingly, I reached the point where having a newly created empty project does not scare me. The new project will be less complicated, at least from the get-go, and much more manageable. This time, I will try to have minimal iterations which illustrate some progress and demonstrate gameplay. Soon, I hope to post the first images-gifs-videos of it.</p><p><br></p></div><!--/blog_post_content-->
+          </div>
+        </div><!--/blog_post--><!--/post_details-->
+      </div>
+    </section>
+    <section class="skrollable u-clearfix u-gradient u-section-2" id="sec-8dac">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-clearfix u-custom-html u-expanded-width u-custom-html-1">
+          <script id="dsq-count-scr" src="//forgotten-dream.disqus.com/count.js" async="async"></script>
+          <div id="disqus_thread"></div>
+          <script> /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://forgotten-dream.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })(); </script>
+          <noscript>Please enable JavaScript to view the &amp;amp;amp;amp;amp;amp;lt;a href="https://disqus.com/?ref_noscript"&amp;amp;amp;amp;amp;amp;gt;comments powered by Disqus.&amp;amp;amp;amp;amp;amp;lt;/a&amp;amp;amp;amp;amp;amp;gt;</noscript>
+        </div>
+        <div class="u-clearfix u-custom-html u-expanded-width u-custom-html-2">
+          <div id="disqus_thread"></div>
+          <script> /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://forgotten-dream.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })(); </script>
+          <noscript>Please enable JavaScript to view the &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;lt;a href="https://disqus.com/?ref_noscript"&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;gt;comments powered by Disqus.&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;lt;/a&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;gt;</noscript>
+        </div>
+      </div>
+    </section>
+    
+    
+    
+    <footer class="u-align-center u-clearfix u-footer u-grey-90 u-footer" id="sec-f6b5"><div class="u-clearfix u-sheet u-sheet-1">
+        <lt-highlighter style="display: none; z-index: 1 !important;">
+          <lt-div spellcheck="false" class="lt-highlighter__wrapper" style="width: 417px; height: 22px; transform: none !important; transform-origin: 208.5px 11.1953px 0px !important; zoom: 1 !important; margin-top: 49px; margin-left: 362px;">
+            <lt-div class="lt-highlighter__scroll-element" style="top: 0px; left: 0px; width: 417px; height: 22px;"></lt-div>
+          </lt-div>
+        </lt-highlighter>
+        <p class="u-small-text u-text u-text-variant u-text-white u-text-1">Forgotten Dream&nbsp;<span class="u-file-icon u-icon u-text-white"><img src="../images/3513164-f3192521.png" alt=""></span>&nbsp;2023<br>
+        </p>
+      </div></footer><section class="u-align-center u-clearfix u-cookies-consent u-grey-80 u-cookies-consent" id="sec-597b">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
+          <div class="u-gutter-0 u-layout">
+            <div class="u-layout-row">
+              <div class="u-container-style u-layout-cell u-left-cell u-size-43-md u-size-43-sm u-size-43-xs u-size-46-lg u-size-46-xl u-layout-cell-1">
+                <div class="u-container-layout u-valign-middle u-container-layout-1">
+                  <h3 class="u-text u-text-default u-text-1">Cookies &amp; Privacy</h3>
+                  <p class="u-text u-text-default u-text-2">This website uses cookies to ensure you get the best experience on our website.</p>
+                </div>
+              </div>
+              <div class="u-align-left u-container-style u-layout-cell u-right-cell u-size-14-lg u-size-14-xl u-size-17-md u-size-17-sm u-size-17-xs u-layout-cell-2">
+                <div class="u-container-layout u-valign-middle-lg u-valign-middle-md u-valign-middle-xl u-valign-top-sm u-valign-top-xs u-container-layout-2">
+                  <a href="###" class="u-border-none u-btn u-button-confirm u-button-style u-hover-palette-3-dark-2 u-palette-3-light-1 u-btn-1">Confirm</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <style> .u-cookies-consent {
+  background-image: none;
+}
+
+.u-cookies-consent .u-sheet-1 {
+  min-height: 212px;
+}
+
+.u-cookies-consent .u-layout-wrap-1 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.u-cookies-consent .u-layout-cell-1 {
+  min-height: 152px;
+}
+
+.u-cookies-consent .u-container-layout-1 {
+  padding: 30px 60px;
+}
+
+.u-cookies-consent .u-text-1 {
+  margin-top: 0;
+  margin-right: 20px;
+  margin-bottom: 0;
+}
+
+.u-cookies-consent .u-text-2 {
+  margin: 8px 20px 0 0;
+}
+
+.u-cookies-consent .u-layout-cell-2 {
+  min-height: 152px;
+}
+
+.u-cookies-consent .u-container-layout-2 {
+  padding: 30px;
+}
+
+.u-cookies-consent .u-btn-1 {
+  letter-spacing: 1px;
+  border-style: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-image: none;
+  margin: 0 auto 0 0;
+}
+
+@media (max-width: 1199px) {
+  .u-cookies-consent .u-sheet-1 {
+    min-height: 131px;
+  }
+
+  .u-cookies-consent .u-layout-cell-1 {
+    min-height: 125px;
+  }
+
+  .u-cookies-consent .u-text-1 {
+    margin-right: 0;
+  }
+
+  .u-cookies-consent .u-text-2 {
+    margin-right: 0;
+  }
+
+  .u-cookies-consent .u-layout-cell-2 {
+    min-height: 125px;
+  }
+}
+
+@media (max-width: 991px) {
+  .u-cookies-consent .u-sheet-1 {
+    min-height: 106px;
+  }
+
+  .u-cookies-consent .u-layout-cell-1 {
+    min-height: 100px;
+  }
+
+  .u-cookies-consent .u-container-layout-1 {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .u-cookies-consent .u-layout-cell-2 {
+    min-height: 100px;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-cookies-consent .u-sheet-1 {
+    min-height: 225px;
+  }
+
+  .u-cookies-consent .u-layout-cell-1 {
+    min-height: 154px;
+  }
+
+  .u-cookies-consent .u-container-layout-1 {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+  }
+
+  .u-cookies-consent .u-layout-cell-2 {
+    min-height: 65px;
+  }
+
+  .u-cookies-consent .u-container-layout-2 {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-cookies-consent .u-sheet-1 {
+    min-height: 121px;
+  }
+
+  .u-cookies-consent .u-layout-cell-1 {
+    min-height: 100px;
+  }
+
+  .u-cookies-consent .u-layout-cell-2 {
+    min-height: 15px;
+  }
+}</style></section>
+  
+</body></html>
